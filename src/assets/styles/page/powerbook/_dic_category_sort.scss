@@ -1,0 +1,86 @@
+// 사전 카테고리 wrapper
+.powerbook-dic-category {
+    position: relative;
+    background-color: #f4f4f4;
+    padding: 8px 0 6px 0;
+
+    &:before {
+        content: '';
+        display: block;
+        border-top: 1px solid rgba(#000, .08);
+    }
+
+    @include bp(pc) {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-top: 2px solid #747880;
+
+        &:before { display: none; }
+    }
+}
+
+// 사전 분류
+.dic-category-sort-wrap {
+    height: 44px;
+    padding-left: 15px;
+    color: #484b51;
+    font-size: 15px;
+    line-height: 40px;
+    background-color: #fafafa;
+    border-bottom: 1px solid #efefef;
+
+    @include bp(pc) {
+        padding-left: 20px;
+        font-size: 14px;
+        letter-spacing: -1px;
+    }
+
+    .select-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-right: 13px;
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            z-index: 0;
+            display: inline-block;
+            @include triangle(10px, #9b9b9b, down);
+        }
+
+        @include bp(pc) {
+            margin-right: 20px;
+
+            &:after {
+                @include triangle(8px, #9b9b9b, down);
+            }
+        }
+    }
+
+    select {
+        position: relative;
+        z-index: 1;
+        padding-right: 16px;
+        margin-left: 2px;
+        border: 0 none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        font-size: 15px;
+        color: #484b51;
+        font-weight: 300;
+        outline: none;
+        cursor: pointer;
+        background-color: transparent;
+
+        &::-ms-expand { display: none; }
+
+        @include bp(pc) {
+            margin-left: 4px;
+            font-size: 14px;
+            letter-spacing: -1px;
+        }
+    }
+}

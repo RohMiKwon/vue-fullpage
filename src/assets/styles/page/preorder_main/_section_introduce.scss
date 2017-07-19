@@ -1,0 +1,265 @@
+.section-introduce {
+    min-height: 538px;
+    background-color: #000;
+    background-image: url('assets/img/main/bg_introduce_m.jpg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    color: #a68b5c;
+
+
+    @include bp(tablet) {
+        background-image: url('assets/img/main/bg_introduce.jpg');
+        background-size: inherit;
+    }
+
+    .wrap-contents {
+        padding: 61px 0 0 0;
+
+        @include bp(pc) {
+            min-height: 1080px;
+            padding-top: 148px;
+        }
+    }
+
+    .title {
+        width: 100%;
+        height: 94px;
+        background: url('assets/img/main/introduce_title.png') no-repeat center top;
+        background-size: auto 100%;
+        @include hide-text;
+
+        @include bp(pc) {
+            background-image: url('assets/img/main/introduce_title_pc.png');
+            height: 193px;
+            background-size: 574px auto;
+        }
+    }
+
+    .subcopy { display: none; }
+
+    .game-introduce-wrap {
+        width: (475px/2);
+        height: (567px/2);
+        margin: 13px auto 0 auto;
+
+        @include bp(tablet) {
+            width: 475px;
+        }
+
+        @include bp(pc) {
+            width: auto;
+            height: auto;
+            margin-top: 66px;
+            @include clearfix;
+        }
+
+        .introduce {
+            position: relative;
+            width: (475px/2);
+            height: (567px/2);
+            margin: 0 auto;
+
+            @include bp(pc) {
+                width: 100%;
+                height: auto;
+            }
+
+            .ongoing-wrap {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 2;
+                width: 100%;
+                padding: 13px;
+
+                @include bp(pc) {
+                    padding: 21px 21px 22px 21px;
+                }
+
+                &:after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 3;
+                    background: url('assets/img/main/introduce_btn_play.png') no-repeat 50% 45%;
+                    opacity: .6;
+                    @include transition(all, .5s);
+                }
+
+                &:hover {
+                    &:after {
+                        opacity: 1;
+                        @include transition(all, .5s);
+                    }
+                }
+
+                //@include bp(pc) {
+                //    padding: 21px;
+                //
+                //    &:after { background: url('assets/img/main/introduce_btn_play_pc.png') no-repeat 50% 50%; }
+                //}
+            }
+
+            .ongoing {
+                width: 100%;
+                z-index: 2;
+            }
+            .frame {
+                width: 100%;
+
+                 @include bp(pc) {
+                    height: auto;
+                }
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                z-index: 1;
+                background: url('assets/img/main/introduce2_t.png') no-repeat 50% 50%;
+                background-size: 50% auto;
+            }
+
+            &-3 {
+                &:after {
+                    background-image: url('assets/img/main/introduce3_t.png');
+                }
+            }
+
+            @include bp(pc) {
+                float: left;
+                width: 33%;
+                margin: 0 .1%;
+                text-align: center;
+
+                &:after {
+                    background-size: auto auto;
+                }
+            }
+        }
+
+        // 티징 (201702)
+        &-t {
+            @include bp(pc) {
+                width: 1000px;
+            }
+
+            .introduce {
+                .ongoing,
+                .frame {
+                    &.pc {
+                        display: none;
+                    }
+                }
+                @include bp(pc) {
+                    float: none;
+                    width: auto;
+                    margin: 0 .1%;
+                    text-align: center;
+
+                    .ongoing,
+                    .frame {
+                        &.pc { display: block; }
+                        &.mobile { display: none; }
+                    }
+                }
+            }
+        }
+
+        .slick-dots {
+            bottom: -15px;
+        }
+        .slick-dots li button {
+            width: 18px;
+            margin-left: 4px;
+            background: rgba(#fff, .2);
+        }
+        .slick-dots li.slick-active button {
+            background-color: #c8a183;
+        }
+    }
+}
+
+.btn-event-notice {
+    display: block;
+    width: 275px;
+    height: 40px;
+    margin: 93px auto 0 auto;
+    font-size: 12px;
+    letter-spacing: -1px;
+    color: rgba(#777c83, .6);
+    text-align: center;
+    text-decoration: none;
+    line-height: 38px;
+    border: 1px solid #212124;
+    opacity: 1;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    @include bp(pc) {
+        width: 210px;
+        height: 57px;
+        margin-top: 170px;
+        font-size: 14px;
+        line-height: 55px;
+    }
+}
+
+
+// share (teaser 2nd)
+.share-wrap {
+    //margin-top: 50px;
+    padding-top: 50px;
+    text-align: center;
+    @include clearfix;
+
+    @include bp(pc) {
+        margin-top: 110px;
+    }
+
+    a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+        background: url('assets/img/main/share_t.png') no-repeat;
+        background-size: auto 80px;
+        border: 1px solid rgba(#fff, .1);
+        @include hide-text;
+
+        &.share-facebook { background-position: -45px 0; }
+        &.share-twitter { background-position: -90px 0; }
+
+        @include bp(pc) {
+            width: 55px;
+            height: 54px;
+            margin: 0 3px;
+            background-size: auto 108px;
+
+            &.share-facebook { background-position: -60px 0; }
+            &.share-twitter { background-position: -120px 0; }
+
+            &:hover {
+                border: 1px solid rgba(#fff, .5);
+                &.share-facebook { background-position: -60px -54px; }
+                &.share-twitter { background-position: -120px -54px; }
+            }
+        }
+    }
+
+    .share-close { display: none; }
+}
+
+.pc .share-wrap .share-kakaotalk { display: none; }

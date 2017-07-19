@@ -1,0 +1,139 @@
+.section-preorder {
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 0;
+        height: 306px;
+        background: url('assets/img/preorder/cover_preorder_m.png') repeat-x left bottom;
+        background-size: 1px 306px;
+    }
+
+    @include bp(pc) {
+        &:after {
+            height: 646px;
+            background-image: url('assets/img/preorder/cover_preorder.png');
+        }
+    }
+}
+
+
+
+.section-preorder .section-contents {
+  padding-top: 140px;
+  padding-bottom: 130px;
+
+  @include bp(pc) {
+    //padding-top: 284px;
+    padding-top: 13.8%;
+    //padding-bottom: 211px;
+  }
+
+  .section-title {
+    width: 280px;
+    height: 68px;
+    background-image: url("assets/img/preorder/logo.png");
+
+    @include bp(pc) {
+      width: 668px;
+      height: 182px;
+    }
+  }
+
+  .btn-preorder {
+    @include hide-text();
+    display: block;
+    //width: (320/2) + px;
+    //height: (106/2) + px;
+    width: 222px;
+    height: 74px;
+    margin: 10px auto 0;
+    background: url("assets/img/preorder/btn_preorder.png") no-repeat 0 0;
+    background-size: cover;
+    cursor: pointer;
+
+    @include bp(pc) {
+      width: 346px;
+      height: 154px;
+      margin-top: -30px;
+      margin-bottom: -14px;
+      //width: 320px;
+      //height: 106px;
+      @include transition(all, 1s);
+
+      &:hover {
+          background-image: url("assets/img/preorder/btn_preorder_hover.png");
+          @include transition(all, .5s);
+      }
+    }
+  }
+
+  .btn-download-game {
+    @include hide-text();
+    display: block;
+    width: 222px;
+    height: 74px;
+    margin: 10px auto 0;
+    background: url("assets/img/preorder/btn_download_game.png") no-repeat 0 0;
+    background-size: cover;
+    cursor: pointer;
+
+    @include bp(pc) {
+      width: 346px;
+      height: 154px;
+      margin-top: -30px;
+      margin-bottom: -14px;
+      @include transition(all, 1s);
+
+      &:hover {
+        background-image: url("assets/img/preorder/btn_download_game_hover.png");
+        @include transition(all, .5s);
+      }
+    }
+  }
+
+  .preorder-info-text{
+    @include hide-text();
+    display: block;
+    width: (386px*.7);
+    height: (148px*.7);
+    margin: -10px auto 0;
+    background: url("assets/img/preorder/txt_open_day_v2.png") no-repeat 0 0;
+    background-size: cover;
+    //display: block;
+    //margin: 15px 0 0;
+    //color: #ffddb5;
+    //text-decoration: none;
+    //font-size: 13px;
+    //
+    //strong {
+    //  display: inline-block;
+    //  height: 22px;
+    //  margin: 0 4px 0 0;
+    //  padding: 0 10px;
+    //  background: url("assets/img/preorder/bg_tag_box.png") no-repeat 50% 0;
+    //  background-size: cover;
+    //  color: #eb7b44;
+    //  line-height: 22px;
+    //  font-weight: normal;
+    //  font-size: 12px;
+    //}
+
+    @include bp(pc) {
+      width: 386px;
+      height: 148px;
+      margin: -50px auto 0;
+      //font-size: 18px;
+      //
+      //strong {
+      //  height: 26px;
+      //  padding: 0 14px;
+      //  margin: 0 6px 0 0;
+      //  line-height: 26px;
+      //  font-size: 14px;
+      //}
+    }
+  }
+}

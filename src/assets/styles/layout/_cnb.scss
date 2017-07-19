@@ -1,0 +1,116 @@
+// CNB
+// ===============================
+
+$cnb-bi-width: 124px;
+$cnb-bi-height: 56px;
+$cnb-bi-sub-width: 97px;
+$cnb-m-header-bg: #5c443b;
+$cnb-1depth-point: #Bc8d5d;
+
+// bi
+#nc-cnb .ncc-bi {
+    margin-top: 0;
+    width: $cnb-bi-sub-width;
+    height: $cnb-bi-height;
+    background-image: url('assets/img/layout/cnb/bi_sub.png');
+    background-size: auto 56px;
+    @include hide-text();
+
+    @include bp(pc) {
+        width: $cnb-bi-width;
+        background-image: url('assets/img/layout/cnb/bi.png');
+    }
+}
+
+// [mobile] left panel > bi
+#nc-cnb .ncc-lnb-header-bi .ncc-bi {
+    width: $cnb-bi-sub-width;
+    height: $cnb-bi-height;
+    background-image: url('assets/img/layout/cnb/bi_sub.png');
+}
+
+#nc-cnb .ncc-lnb-wrap {
+    border-color: rgba(#fff, 0.05);
+}
+
+// [mobile] sticky, left panel > background-color
+#nc-cnb .ncc-header,
+#nc-cnb.is-sticky .ncc-header,
+#nc-cnb .ncc-left-panel-header {
+    background-color: $cnb-m-header-bg;
+}
+
+// [pc] sticky header
+@include bp(pc) {
+    #nc-cnb .ncc-header,
+    #nc-cnb.is-sticky .ncc-header { background-color: transparent; }
+}
+
+// 1depth hover, active > font-color
+//#nc-cnb .ncc-lnb .ncc-lnb-item.is-over>a,
+//#nc-cnb .ncc-lnb .ncc-lnb-item.is-active>a,
+//#nc-cnb .ncc-lnb .ncc-lnb-item a:hover {
+//    color: $cnb-1depth-point;
+//}
+
+// 1depth hover, active bar > image
+#nc-cnb .ncc-lnb .ncc-lnb-item>a:after {
+    background-image: url('assets/img/layout/cnb/nav_active.png');
+}
+
+//대표 캐릭터 선택 > 캐릭터 리스트 li
+#nc-cnb .ncc-character-item .ncc-lnb-item__sub li { padding: 0; }
+#nc-cnb .ncc-character-item .ncc-lnb-item__sub {
+    padding: 0 0 15px 0;
+    margin: 13px 17px 0 17px;
+    border-bottom: 1px solid #efefef;
+
+    &:last-child { border: 0 none; }
+}
+
+.cnb-character-list-items {
+    color: #000;
+    line-height: 1.4;
+    letter-spacing: -1px;
+
+
+    .character-info {
+        font-size: 13px;
+
+        .character {
+            a { color: #000 !important; }
+
+            .lv {
+                color: #61646d;
+                font-size: 14px;
+                letter-spacing: 0;
+            }
+            .name { font-weight: normal; }
+        }
+
+        .guild {
+            margin-left: 5px;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                margin-right: 5px;
+                background-color: #61646d;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .last-access {
+        display: block;
+        margin-top: 1px;
+        color: #8c919a;
+        font-size: 14px;
+    }
+}
+
+// ios 청소년불가 앱 다운로드 아이콘 노출 안함
+.IOS #nc-cnb .ncc-appdownload ul li:nth-child(2) { display: none; }

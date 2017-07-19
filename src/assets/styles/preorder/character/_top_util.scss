@@ -1,0 +1,125 @@
+.top-util {
+  @include pie-clearfix();
+
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include bp(pc) {
+    top: 30px;
+    left: auto;
+    right: auto;
+  }
+
+  .item {
+    position: absolute;
+    top: 0;
+
+    @include bp(pc) {
+      position: static;
+      float: left;
+      &:nth-of-type(1) .link{
+        margin-right: -1px;
+      }
+    }
+
+    &.item1{
+      left: 0;
+    }
+
+    &.item2{
+      right: 0;
+
+    }
+  }
+
+  .link {
+    display: block;
+
+    @include bp(pc) {
+      height: 43px;
+      padding: 0 20px;
+      line-height: 42px;
+      font-size: 14px;
+
+      border: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,2555,255, .5);
+      transition: all .3s;
+    }
+
+    &:hover{
+      @include bp(pc) {
+        border: 1px solid rgba(255,255,255,.5);
+        color: rgba(255,2555,255, .8);
+
+        &:before {
+          opacity: .8;
+        }
+
+      }
+    }
+
+    &:before {
+      display: inline-block;
+      background-image: url("assets/img/preorder/character/sp_icon_m.png");
+      background-repeat: no-repeat;
+      background-size: (50*0.5)+px (100*0.5)+px;
+      content: '';
+
+      @include bp(pc) {
+        display: inline-block;
+        background-image: url("assets/img/preorder/character/sp_icon2.png");
+        background-size: 50px 40px;
+        opacity: .5;
+        vertical-align: middle;
+        transition: all .3s;
+      }
+    }
+
+    .text {
+      display: none;
+
+      @include bp(pc) {
+        display: inline-block;
+      }
+    }
+
+    &.home {
+      &:before {
+        width: (48*0.5)+px;
+        height: (38*0.5)+px;
+        background-position: 0 0;
+      }
+
+      @include bp(pc) {
+        &:before {
+          width: 47px;
+          height: 11px;
+          margin-right: 4px;
+          background-position: 0 0;
+        }
+      }
+    }
+
+    &.community {
+      &:before {
+        width: (39*0.5)+px;
+        height: (45*0.5)+px;
+        background-position: 0 (-50*0.5)+px;
+      }
+
+      @include bp(pc) {
+        &:before {
+          width: 16px;
+          height: 20px;
+          margin-right: 6px;
+          background-position: 0 -20px;
+        }
+      }
+    }
+  }
+}

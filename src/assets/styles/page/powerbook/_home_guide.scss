@@ -1,0 +1,146 @@
+// 게임 가이드
+
+.section-guide {
+    padding-top: 34px;
+
+    .guide-list {
+        border-bottom: 1px solid #efefef;
+    }
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .guide-items {
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+        height: 100%;
+        min-height: 200px;
+        border-right: 1px solid #efefef;
+
+        & > a {
+            @include ellipsis();
+            display: block;
+            height: 32px;
+            margin-right: -1px;
+            padding-top: 6px;
+            padding-left: 14px;
+            border-right: 1px solid #fff;
+            font-size: 12px;
+            background-color: #efefef;
+
+            img {
+                width: 18px;
+                height: 18px;
+                margin-right: 4px;
+                vertical-align: middle;
+            }
+            
+            span {
+                vertical-align: middle;
+            }
+
+            &.off {
+                color: rgba(#313438, .3);
+            }
+        }
+
+        &:nth-child(3n) {
+            width: 34%;
+            border-right: 0;
+
+            & > a {
+                border-right: 0;
+            }
+        }
+
+        &:last-child {
+            width: 100%;
+            min-height: 140px;
+            border-right: 0;
+
+            & > a {
+                border-right: 0;
+            }
+        }
+
+        // 2depth
+        ul {
+            padding: 8px 0 20px;
+
+            li {
+                a {
+                    display: block;
+                    padding-left: 14px;
+                    font-size: 11px;
+                    line-height: 2.18;
+                    letter-spacing: -1px;
+                    color: #313438;
+
+                    &:hover {
+                        color: #bc8d5d;
+                    }
+
+                    &.off {
+                        color: rgba(#313438, .3);
+                    }
+                }
+            }
+        }
+    }
+
+    @include bp(tablet) {
+        padding-top: 52px;
+
+        .guide-items {
+            width: 20%;
+            min-height: 250px;
+
+            & > a {
+                height: 52px;
+                padding-top: 12px;
+                padding-left: 20px;
+                font-size: 16px;
+
+                img {
+                    width: 28px;
+                    height: 28px;
+                    margin-right: 10px;
+                }
+            }
+
+            &:nth-child(3n),
+            &:last-child {
+                width: 20%;
+                border-right: 1px solid #efefef;
+
+                & > a {
+                    border-right: 1px solid #fff;
+                }
+            }
+
+            &:nth-child(5n) {
+                border-right: 0;
+
+                & > a {
+                    border-right: 0;
+                }
+            }
+
+            ul {
+                padding: 13px 0 28px;
+
+                li {
+                    a {
+                        padding-left: 19px;
+                        font-size: 14px;
+                        line-height: 1.86;
+                    }
+                }
+            }
+        }
+    }
+}

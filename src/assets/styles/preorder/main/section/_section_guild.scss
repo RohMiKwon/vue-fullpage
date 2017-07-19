@@ -1,0 +1,626 @@
+.section-guild {
+    position: relative;
+
+    .mtalk-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        height: (116px/2);
+        padding: 10px 0 0 0;
+        font-size: 13px;
+        color: #785e42;
+        line-height: 1.4;
+        text-align: center;
+        background-color: rgba(#261a0a, .9);
+
+        @include bp(pc) {
+            height: 65px;
+            font-size: 15px;
+            padding-top: 22px;
+            letter-spacing: -.7px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #785e42;
+        }
+
+        .mtalk {
+            position: relative;
+            display: inline-block;
+            padding: 7px 0 0 63px;
+            text-align: left;
+
+            a {
+                display: block;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -28px;
+                    left: 0;
+                    display: inline-block;
+                    width: 67px;
+                    height: 67px;
+                    background: url('assets/img/preorder/icon_mtalk_m.png') no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            @include bp(pc) {
+                padding-left: 110px;
+                padding-top: 0;
+
+                a {
+                    &:before {
+                        display: none;
+                        width: 106px;
+                        height: 106px;
+                        top: -69px;
+                        background-image: url('assets/img/preorder/icon_mtalk.png');
+                    }
+                }
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: -69px;
+                    left: 0;
+                    display: inline-block;
+                    width: 106px;
+                    height: 106px;
+                    background: url('assets/img/preorder/icon_mtalk.png') no-repeat;
+                    background-size: cover;
+                }
+
+                .download {
+                    display: inline-block;
+                    width: 199px;
+                    height: 26px;
+                    margin-top: -2px;
+                    background: url('assets/img/preorder/btn_mtalk_download.png') no-repeat;
+                    vertical-align: middle;
+                    @include hide-text();
+
+                    &.ios { background-position: -199px top; }
+
+                    &.aos { margin-left: 109px; }
+                }
+            }
+        }
+
+        strong {
+            font-weight: normal;
+            color: #bc8d5d;
+        }
+
+        a.mobile {
+            @include bp(pc) { display: none;}
+            margin-left: 10px;
+        }
+
+        .pc {
+            display: none;
+
+            @include bp(pc) {
+                display: inline-block;
+                margin-left: 5px;
+
+                br { display: none; }
+            }
+        }
+    }
+}
+
+.section-guild .section-contents {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include bp(pc) {
+        padding-top: 123px;
+    }
+
+    .section-title {
+        width: (549/1.8)+px;
+        height: (198/1.8)+px;
+        background-image: url("assets/img/preorder/title_guild_m.png");
+
+        @include bp(pc) {
+            width: 909px;
+            height: 509px;
+            background-image: url("assets/img/preorder/title_guild.png");
+        }
+    }
+
+    .subcopy { margin: 0; display: none; }
+    .info-wrap {
+        margin-top: 19px;
+        font-size: 13px;
+        color: #a86f2c;
+
+        @include bp(pc) {
+            margin-top: -186px;
+        }
+
+        .date,
+        .target {
+            width: 230px;
+            margin: 3px auto;
+            text-align: left;
+            letter-spacing: -.4px;
+            line-height: 1.4;
+
+            @include bp(pc) {
+                display: inline-block;
+                width: auto;
+                font-size: 16px;
+                margin-left: 12px;
+                margin-right: 12px;
+            }
+        }
+
+        strong {
+            display: inline-block;
+            width: 43px;
+            height: 19px;
+            padding-top: 1px;
+            margin-right: 2px;
+            font-size: 12px;
+            font-weight: normal;
+            color: #977249;
+            text-align: center;
+            border: 1px solid rgba(#936f47, .5);
+            border-radius: 19px;
+
+            @include bp(pc) {
+                width: 58px;
+                height: 28px;
+                padding-top: 0;
+                font-size: 14px;
+                line-height: 24px;
+            }
+        }
+    }
+
+    .btn-set {
+        width: 198px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top:23px;
+
+        @include bp(pc) {
+            width: auto;
+            margin-top: 56px;
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: (396px/2);
+            height: 75px;
+            background-image: url("assets/img/preorder/btn_guild_before_m.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: cover;
+            @include hide-text();
+
+            @include bp(pc) {
+                width: 290px;
+                height: 118px;
+                //margin: 0 -3px;
+                background-size: auto 118px;
+                @include transition(background, 1s);
+
+                &:hover {
+                    @include transition(background, .3s);
+                    background-image: url("assets/img/preorder/btn_guild_before_on.png");
+                }
+            }
+        }
+
+        .btn-preorder-guild {
+            @include bp(pc) {
+                background-image: url("assets/img/preorder/btn_guild_before.png");
+            }
+        }
+
+        .btn-my-guild {
+            background-position: left bottom;
+
+            @include bp(pc) {
+                background-image: url("assets/img/preorder/btn_guild_before.png");
+                background-position: right top;
+            }
+        }
+
+        // 안정화 후
+        &-after {
+            width: auto;
+
+            .btn-preorder-guild {
+                width: (512px/2);
+                height: (174px/2);
+                background-size: cover;
+
+                @include bp(pc) {
+                    width: 346px;
+                    height: 125px;
+                    background-image: url("assets/img/preorder/btn_guild_after.png");
+
+                    &:hover {
+                        background-image: url("assets/img/preorder/btn_guild_after_on.png");
+                    }
+                }
+            }
+        }
+    }
+
+    .status-wrap {
+        // 소속혈맹이 있을때가 기본
+        position: relative;
+        width: 320px;
+        height: (326px/2);
+        margin: 8px auto 0 auto;
+        padding: 9px 25px 0 25px;
+        text-align: left;
+        line-height: 1.2;
+        background: url('assets/img/preorder/guild_status_m.png') no-repeat;
+        background-size: cover;
+
+        @include bp(pc) {
+            width: 586px;
+            height: 206px;
+            padding: 18px 53px 0 53px;
+            margin-top: 38px;
+            margin-bottom: 20px;
+            background-image: url('assets/img/preorder/guild_status_member.png');
+
+            &-waiting {
+                height: 226px;
+                margin-bottom: 0;
+                background-image: url('assets/img/preorder/guild_status_waiting.png');
+            }
+        }
+
+        .btn-wrap {
+            padding: 9px 0 0 0;
+            text-align: left;
+
+            .go-guild-list {
+                color: #e2a181;
+                font-size: 13px;
+                text-decoration: none;
+
+                &:after {
+                    content: '';
+                    display: inline-block;
+                    width: 5px;
+                    height: 9px;
+                    margin-left: 6px;
+                    vertical-align: top;
+                    margin-top: 6px;
+                    background: url('assets/img/preorder/guild_arrow1.png') no-repeat;
+                    background-size: cover;
+                }
+            }
+
+            .btn {
+                position: absolute;
+                right: 25px;
+                bottom: 30px;
+                display: inline-block;
+                min-width: 80px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 13px;
+                color: #fff;
+                text-align: center;
+                text-decoration: none;
+                background-color: #7c0202;
+                border: 0 none;
+                border-radius: 12px;
+
+                @include bp(pc) {
+                    right: 53px;
+                    bottom: 65px;
+                    min-width: 100px;
+                    height: 34px;
+                    line-height: 30px;
+                    font-size: 14px;
+                    letter-spacing: -.5px;
+                    border-radius: 34px;
+                }
+            }
+        }
+    }
+
+    .guild-info-wrap {
+        .title {
+            padding: 14px 0 12px 0;
+            margin: 0 0 10px 0;
+            color: #fff;
+            font-weight: normal;
+            font-size: 15px;
+            letter-spacing: -.6px;
+            line-height: 1.2;
+            text-align: center;
+            border-bottom: 1px solid rgba(#fff, .15);
+
+            @include bp(pc) {
+                margin-bottom: 16px;
+                padding-top: 24px;
+                padding-bottom: 19px;
+                font-weight: bold;
+                font-size: 21px;
+                letter-spacing: -1.5px;
+            }
+        }
+
+        .server,
+        .guild {
+            color: #000;
+            font-size: 14px;
+
+            @include bp(pc) {
+                font-size: 16px;
+                letter-spacing: -.7px;
+            }
+        }
+
+        .guild {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                margin-right: 4px;
+                background-color: #000;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+
+        .person {
+            font-style: normal;
+        }
+
+        .master-wrap {
+            display: block;
+            padding: 4px 0 0 0;
+            color: #e2a181;
+            font-size: 13px;
+
+            .master {
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 2px;
+                    height: 2px;
+                    margin-right: 4px;
+                    background-color: #e2a181;
+                    border-radius: 50%;
+                    vertical-align: middle;
+                }
+            }
+
+            @include bp(pc) {
+                padding-top: 5px;
+                font-size: 14px;
+                letter-spacing: -.3px;
+            }
+        }
+    }
+
+    @include bp(pc) {
+        // 승인 대기 상태인 경우 재선언
+        .status-wrap-waiting {
+            height: 226px;
+            margin-bottom: 0;
+            background-image: url('assets/img/preorder/guild_status_waiting.png');
+
+            .btn-wrap { padding-top: 14px; }
+            .btn-wrap .btn { bottom: 85px; }
+            .btn-wrap .go-guild-list {
+                font-size: 14px;
+                letter-spacing: -.4px;
+
+                &:after { vertical-align: middle; margin-top: -2px; }
+            }
+        }
+    }
+
+   .more-wrap {
+       padding: 15px 0 0 0;
+       font-size: 14px;
+       line-height: 1.4;
+
+       @include bp(pc) {
+           padding-top: 27px;
+           font-size: 16px;
+       }
+
+       .bonus {
+           display: none;
+
+           @include bp(pc) {
+               display: inline-block;
+               width: 58px;
+               height: 15px;
+               margin-right: 5px;
+               background: url('assets/img/preorder/txt_bonus.png') no-repeat;
+               @include hide-text();
+               vertical-align: middle;
+           }
+       }
+
+       a {
+           color: #a86f2c;
+           letter-spacing: -.8px;
+           text-decoration: none;
+
+           &:after {
+               content: '';
+               display: inline-block;
+               width: 6px;
+               height: 11px;
+               margin-top: 4px;
+               margin-left: 5px;
+               //vertical-align: middle;
+               vertical-align: top;
+
+               background: url('assets/img/preorder/guild_arrow2.png') no-repeat;
+               background-size: cover;
+           }
+
+           @include bp(pc) {
+               &:after {
+                   vertical-align: middle;
+                   margin-top: -2px;
+               }
+           }
+       }
+
+   }
+}
+
+// 혜택 slide 재선언
+.page-guild  {
+    background: #000 url("assets/img/preorder/bg_guild_visual_m.jpg") no-repeat;
+    background-size: 100%;
+
+    @include bp(pc) {
+        background-image: url("assets/img/preorder/bg_guild_visual.jpg");
+        background-size: auto 100%;
+    }
+
+    .page-contents {
+        @include bp(pc) {
+            margin-top: 0;
+            //padding-right: 36px;
+        }
+    }
+
+    .page-inner {
+        @include bp(pc) {
+            max-width: 608px;
+        }
+    }
+
+    .page-contents-items {
+        padding-top: 25px;
+        padding-bottom: 24px;
+
+        @include bp(pc) {
+            padding-bottom: 40px;
+        }
+    }
+
+    .text {
+    }
+
+    .img-wrap {
+        position: relative;
+        //margin: 10px 0 9px 0;
+        margin: 20px 0 0 0;
+
+        @include bp(pc) {
+            margin-top: 34px;
+            //margin-bottom: 23px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 305px;
+            height: auto;
+
+            &.img-m {
+                @include bp(pc) { display: none; }
+            }
+
+            &.img-pc {
+                display: none;
+
+                @include bp(pc) { display: block; width: auto; max-width: 455px; }
+            }
+        }
+    }
+
+    .btn-set {
+        margin-top: 20px;
+    }
+
+    .btn-guild-attention {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 32.3%;
+        height: 28%;
+        @include hide-text();
+
+        @include bp(pc) {
+            width: 119px;
+            height: 39px;
+        }
+    }
+
+    .btn-appstore {
+        margin-left: 5px;
+    }
+
+    .bonus-wrap {
+        margin-top: 15px;
+        padding: 10px 15px 14px 15px;
+        font-size: 12px;
+        line-height: 1.4;
+        background-color: #f1f1f1;
+
+        .title {
+            color: #b5804c;
+        }
+
+        strong {
+            font-weight:normal;
+            color: #b5804c;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        @include bp(pc) {
+            position: relative;
+            padding-top: 15px;
+            padding-bottom: 16px;
+            padding-left: 90px;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: -.5px;
+
+            .title {
+                position: absolute;
+                left: 25px;
+                top: 17px;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+// slide 오픈 시 mtalk 감추기
+.fp-viewing-guild-1 {
+    .mtalk-wrap {
+        opacity: 0;
+        z-index: 0;
+    }
+}
+
+.fp-viewing-guild-0 {
+    .mtalk-wrap {
+        @include transition(opacity, .5s);
+        @include transition-delay(.5s);
+    }
+}

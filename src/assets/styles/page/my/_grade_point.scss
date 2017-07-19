@@ -1,0 +1,168 @@
+// 프로필 > 등급 포인트
+// ===============================
+
+.profile-point-header {
+    padding: 28px 0 0 0;
+    line-height: 1.2;
+    text-align: center;
+
+    @include bp(pc) {
+        padding-top: 0;
+        padding-bottom: 40px;
+        margin-top: -10px;
+    }
+
+    .point-wrap {
+        font-size: 21px;
+        color: #000;
+
+        .title {
+            font-weight: normal;
+            letter-spacing: -1px;
+        }
+
+        .point {
+            font-style: normal;
+        }
+
+        @include bp(pc) {
+            display: inline-block;
+            font-size: 22px;
+            vertical-align: middle;
+        }
+    }
+
+    .btn-wrap {
+        margin: 10px 0 0 0;
+
+        @include bp(pc) {
+            display: inline-block;
+            width: 170px;
+            margin-top: 0;
+        }
+    }
+
+    .btn {
+        min-width: 150px;
+        height: 32px;
+        padding: 0 15px;
+        line-height: 30px;
+        font-size: 14px;
+        text-align: center;
+        color: #bc8d5d;
+        border: 1px solid #bc8d5d;
+        border-radius: 32px;
+
+        @include bp(pc) {
+            min-width: 170px;
+            height: 41px;
+            padding: 0 20px;
+            margin-left: 10px;
+            font-size: 15px;
+            line-height: 38px;
+        }
+    }
+
+    .btn-go-notice {
+
+    }
+}
+
+.profile-point-list-wrap {
+    margin: 28px 18px 0 18px;
+    border-top: 1px solid #e3e3e3;
+
+    @include bp(pc) {
+        margin: 0;
+    }
+
+    .ncCommmentMore {
+        position: relative;
+        z-index: 2;
+        margin-top: -1px;
+
+        &:hover {
+            border-color: rgba(#a2a8b2, .6);
+        }
+    }
+}
+
+.profile-point-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.profile-point-items {
+    position: relative;
+    padding: 15px 75px 15px 0;
+    font-size: 16px;
+    //border-bottom: 1px solid #e3e3e3;
+    border-bottom: 1px solid #efefef;
+
+    @include bp(pc) {
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .icon {
+        display: inline-block;
+        min-width: 44px;
+        height: 22px;
+        margin-right: 4px;
+        font-size: 13px;
+        color: #bc8d5d;
+        line-height: 20px;
+        text-align: center;
+        border: 1px solid #bc8d5d;
+        border-radius: 22px;
+
+        &.minus {
+            color: #a2a8b2;
+            border-color: #a2a8b2;
+        }
+
+        @include bp(pc) {
+            min-width: 55px;
+            margin-right: 2px;
+        }
+    }
+
+    .ic-new {
+        display: inline-block;
+        width: 6px;
+        height: 9px;
+        margin-top: -3px;
+        background: url('assets/img/my/ic_new.png') no-repeat;
+        background-size: cover;
+        vertical-align: middle;
+        @include hide-text();
+
+        @include bp(pc) {
+            width: auto;
+            height: auto;
+            margin-left: 2px;
+            color: #ff5f3c;
+            text-indent: 0;
+            font-size: 11px;
+            font-style: normal;
+            background: none;
+        }
+    }
+
+    .title {
+        @include word-wrap;
+    }
+
+    .date {
+        position: absolute;
+        right: 0;
+        top: 17px;
+        font-size: 14px;
+        color: #8c919a;
+
+        @include bp(pc) {
+            font-size: 15px;
+        }
+    }
+}

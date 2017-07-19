@@ -1,0 +1,236 @@
+// 하위 브라우저 대응
+//-------------------------
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+div#div_nctop div.gnbContainer div.gnbServicesGe,
+div#div_nctop div.gnbContainer div.gnbIsLogin { display: none; }
+
+.notsupported-container {
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 97.1%;
+
+    h1, h2, p, ul, li, dl, dt, dd, ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    a, img {
+        border: 0 none;
+    }
+}
+
+.notsupported-header {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 172px 20px 0 20px;
+    text-align: center;
+
+    .title {
+        font-size: 26px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: -1.4px;
+        text-align: center;
+        color: #1f1f1f;
+    }
+
+    .subcopy {
+        margin-top: 5px;
+        font-size: 16px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.4;
+        text-align: center;
+        color: #666;
+    }
+
+    .btn-ie-upgrade {
+        margin-top: 30px;
+    }
+}
+
+.notsupported-contents {
+    width: 980px;
+    margin: 141px auto 0 auto;
+    padding: 0 0 80px 0;
+}
+
+.error-mobilegame-wrap {
+    .title {
+        font-size: 16px;
+        line-height: 2.8;
+        color: #1f1f1f;
+        text-align: center;
+        font-weight: normal;
+        font-style: normal;
+
+        &:before {
+            content: '';
+            display: block;
+            width: 21px;
+            height: 1px;
+            margin: 0 auto;
+            border-top: solid 1px #000000;
+            //background-color: #000;
+        }
+    }
+}
+
+.mobilegame-list {
+    clear: both;
+    margin: 25px 0 0 0;
+    overflow: hidden;
+}
+
+.mobilegame-list-items-wrap {
+    float: left;
+    width: 480px;
+
+    &:first-child {
+        margin-right: 20px;
+    }
+}
+
+.mobilegame-list-items {
+    width: 100%;
+
+    .items-wrap {
+        position: relative;
+        z-index: 3;
+        display: block;
+        width: 100%;
+        height: 240px;
+        overflow: hidden;
+        box-sizing: content-box;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .thumb {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+        border: 0 none;
+    }
+
+    .mask {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 80px;
+        background: rgba(0,0,0,.7);
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#D7000000,endColorstr=#D7000000)"; /* IE8 */
+    }
+
+    .game,
+    .subcopy {
+        position: relative;
+        z-index: 2;
+        display: block;
+        padding: 0 10px;
+        text-align: center;
+    }
+
+    .game {
+        margin-top: 175px;
+        font-size: 16px;
+        color: #fff;
+        font-weight: normal;
+        letter-spacing: -1px;
+
+    }
+
+    .subcopy {
+        margin-top: 8px;
+        font-size: 13px;
+        opacity: 0.6;
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+        color: #fff;
+        letter-spacing: -.9px;
+    }
+}
+
+.mobilegame-download {
+    margin-top: 12px;
+    text-align: right;
+
+    img {
+        width: 34px;
+        height: 34px;
+    }
+}
+
+.notsupported-footer-wrap {
+    display: table-row;
+    width: 100%;
+    height: 90px;
+    background-color: #000;
+    text-align: center;
+
+    .copyright {
+        margin: 0;
+        padding: 39px 0 0 0;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 0.92;
+        text-align: center;
+        color: rgba(#fff, .4);
+        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    }
+}
+
+button.btn-error,
+a.btn-error,
+.btn-error {
+    display: inline-block;
+    min-width: 180px;
+    height: 63px;
+    padding: 0 33px;
+    margin: 0 3px;
+    font-size: 15px;
+    line-height: 61px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    border-radius: 100px;
+    border: 1px solid #ceab90;
+    color: #ceab90;
+    text-decoration: none;
+
+    &:hover {
+        color: #c69c7c;
+        border-color: #bd8e6c;
+    }
+
+    &--o {
+        background-color: #c69c7c;
+        border: 0 none;
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+            background-color: #bd8e6c;
+            border: 0 none;
+        }
+    }
+
+    @include bp(pc) {
+
+    }
+}

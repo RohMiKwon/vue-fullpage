@@ -1,0 +1,108 @@
+// my character list
+// ===============================
+
+.my-guild-member-list-wrap {
+    margin-top: 6px;
+
+    @include bp(pc) {
+        margin-top: -22px;
+    }
+}
+
+.my-guild-member-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include clearfix;
+
+    @include bp(pc) {
+        border-bottom: solid 1px #f0f0f0;
+    }
+}
+
+.my-guild-member-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    min-height: 50px;
+    margin: 0 18px;
+    //padding: 20px 0 20px 62px;
+    padding: 10px 0 10px 0;
+    list-style-type: none;
+    border-bottom: solid 1px #f0f0f0;
+
+    //@include bp(tablet) {
+    //    float: left;
+    //    width: (100%/2);
+    //    margin: 1px 0 -1px 0;
+    //    padding: 0 18px;
+    //}
+
+    @include bp(pc) {
+        float: left;
+        width: (100%/2);
+        min-height: 104px;
+        margin: 1px 0 -1px 0;
+        padding: 12px 25px;
+    }
+
+    @include bp(max) {
+        width: (100%/3);
+    }
+
+    .thumb-wrap {
+        position: relative;
+        display: inline-block;
+        margin-right: 12px;
+
+        @include bp(pc) {
+            margin-right: 18px;
+        }
+
+        .thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            vertical-align: top;
+        }
+
+        @include bp(pc) {
+            .thumb {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .character {
+        display: block;
+        margin-right: 7px;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        color: #000;
+
+        .lv {
+            color: #747880;
+        }
+
+        .name {
+            font-weight: normal;
+        }
+
+        @include bp(pc) {
+            display: inline-block;
+            margin-top: 0;
+            //vertical-align: middle;
+            font-size: 16px;
+            letter-spacing: -.7px;
+        }
+
+        @include bp(max) {
+            display: inline-block;
+        }
+    }
+
+
+}

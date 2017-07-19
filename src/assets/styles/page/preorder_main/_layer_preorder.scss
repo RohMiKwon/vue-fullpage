@@ -1,0 +1,161 @@
+
+.layer-preorder {
+    //display: block;
+
+    .layer-wrap {
+        @include bp(pc) {
+            //min-width: 1001px;
+            max-width: 1001px;
+
+        }
+    }
+    .layer-container {
+        @include bp(pc) {
+            max-width: 1001px;
+            min-height: 592px;
+            //padding: 10px 11px;
+            background-image: url('assets/img/popup/bg_pc.png');
+            background-size: cover;
+
+            &:before,
+            &:after {
+                top: -10px;
+                width: 96px;
+                height: 114px;
+            }
+            &:before {
+                left: -11px;
+            }
+
+            &:after {
+                right: -11px;
+                background-position: right top;
+            }
+        }
+    }
+
+    .layer-header {
+        padding: 27px 0 40px 0;
+        background: url('assets/img/popup/bg_line.png') no-repeat center bottom;
+        background-size: auto 20px;
+
+        img {
+            width: 280px;
+            vertical-align: top;
+        }
+
+        @include bp(pc) {
+            padding-top: 37px;
+            padding-bottom: 65px;
+            background-size: auto;
+
+            img {
+                width: 443px;
+            }
+        }
+    }
+
+    .layer-contents {
+
+        @include bp(pc) {
+            position: relative;
+            margin-top: -23px;
+            padding: 0 82px 0 432px;
+        }
+
+        .reward {
+            text-align: center;
+            height: 180px;
+            background: url('assets/img/popup/img_preorder_reward.png') no-repeat center top;
+            background-size: auto 180px;
+
+            img {
+                display: none;
+            }
+
+            @include bp(pc) {
+                position: absolute;
+                top: -61px;
+                left: 0;
+                width: 432px;
+                height: 384px;
+                background-image: url('assets/img/popup/img_preorder_reward_pc.png');
+                background-position: right top;
+                background-size: contain;
+            }
+        }
+
+        .store {
+            @include bp(pc) {
+                margin-top: 60px;
+                font-size: 20px;
+
+                label {
+                    text-indent: 41px;
+                    line-height: 28px;
+
+                    .icon-os {
+                        width: 24px;
+                        height: 27px;
+                    }
+                }
+                label:before {
+                    width: 28px;
+                    height: 28px;
+                    top: 3px;
+                }
+            }
+        }
+
+        .input-group-wrap {
+            @include bp(pc) {
+                position: relative;
+                @include clearfix;
+                height: 62px;
+                border-width: 1px;
+                margin-top: 20px;
+                padding-right: 120px;
+
+                .select-wrap,
+                .input-wrap {
+                    font-size: 22px;
+                    line-height: 58px;
+
+                }
+
+                input {
+                    height: 59px;
+                }
+
+                .btn-preorder {
+                    display: inline-block;
+                    position: absolute;
+                    z-index: 2;
+                    top: 0px;
+                    right: 0px;
+                    width: 120px;
+                    height: 62px;
+                    background: url('assets/img/popup/btn_confirm_pc.png') no-repeat;
+                    background-size: cover;
+                    border: 0 none;
+                    @include hide-text;
+                }
+            }
+        }
+
+        .terms-area {
+            @include bp(pc) {
+                margin-top: 15px;
+            }
+        }
+    }
+
+    .layer-btn-close {
+        @include bp(pc) {
+            top: 36px;
+            right: 31px;
+            width: 31px;
+            height: 30px;
+        }
+    }
+}

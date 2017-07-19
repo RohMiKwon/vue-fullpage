@@ -1,0 +1,61 @@
+// 초보자 팁
+.section-tip {
+    margin-top: -20px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    .tip-items {
+        margin: 0 3px;
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .tip-menu-list {
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .tip-menu-items {
+        position: relative;
+        display: inline-block;
+        height: 11px;
+        margin-top: 22px;
+        padding: 0 10px;
+        border-right: 1px solid #c9c9c9;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: -0.9px;
+        color: #000;
+
+        &:last-child {
+            border: 0;
+        }
+    }
+
+    @include bp(tablet) {
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+
+        .tip-items {
+            margin: 0 10px;
+        }
+
+        .tip-menu-items {
+            width: 155px;
+            height: 19px;
+            margin-top: 39px;
+            padding: 0;
+            font-size: 14px;
+            line-height: 17px;
+
+            &:before {
+                height: 18px;
+                margin-top: -9px;
+            }
+        }
+    }
+}

@@ -1,0 +1,249 @@
+// layout_container & contents
+// ===============================
+
+// layout
+//-------------------------
+.container {
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+}
+
+.section-contents {
+    //padding-top: 30px;
+    padding-top: 20px;
+
+    @include bp(pc) {
+        padding-top: 55px;
+        padding-bottom: 0;
+    }
+}
+
+.wrap-contents {
+    //background-color: #fff;
+
+    //@include bp(max) {
+    //    max-width: 1260px;
+    //    margin: 0 auto;
+    //}
+}
+
+.max-width-container {
+    max-width: 1260px;
+    margin: 0 auto;
+}
+
+// google logger height 재선언
+iframe[name="google_conversion_frame"] { display: none; }
+
+// 앱일때 처리
+.ncMob { background-color: #fff; }
+.ncMob #nc-cnb { display: none; }
+.ncMob .container { margin-top: -56px; }
+.ncMob #footer .footer { display: none; }
+
+//런칭 배너
+.banner-launching-wrap {
+    display: none;
+    position: absolute;
+    top: (170px/2);
+    left: 0;
+    z-index: 999;
+    right: 0;
+    width: 100%;
+    height: 0;
+    text-align: center;
+
+    @include bp(pc) {
+        top: 221px;
+    }
+
+    .banner-launching {
+        position: relative;
+        display: inline-block;
+
+        .img-m {
+            width: (360px/2);
+            @include bp(pc) {
+                display: none;
+            }
+        }
+        .img-pc {
+            display: none;
+
+            @include bp(pc) {
+                display: block;
+            }
+        }
+
+        .banner-close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1000;
+            width: 28px;
+            height: 28px;
+            padding: 0;
+            margin: 0;
+            border: 0 none;
+            background: transparent;
+            @include hide-text();
+
+            @include bp(pc) {
+                right: 8px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+.main .banner-launching-wrap {
+    top: 300px;
+
+    @include bp(pc) {
+        top: 570px;
+    }
+}
+
+
+//// 메인
+//.index-container{
+//    text-align: center;
+//    .wrap-contents {
+//        position: relative;
+//        //padding: 0 0 0 18px;
+//        z-index: 10;
+//        background: none;
+//    }
+//
+//    .title,[class^=btn], .logo {
+//        display: block;
+//        margin: 0 auto;
+//        background-position: 0 0;
+//        background-repeat: no-repeat;
+//        @include hide-text;
+//    }
+//
+//    .copy {
+//        font-size: 14px;
+//
+//        p {
+//            margin: 0;
+//        }
+//
+//        .sub-copy {
+//            font-size: 1em;
+//        }
+//
+//        .sub-copy2 {
+//            font-size: .75em;
+//        }
+//    }
+//
+//    br {
+//        display: block;
+//    }
+//
+//    [class^=btn] {
+//        cursor: pointer;
+//    }
+//
+//    .link {
+//        display: inline-block;
+//        width: 81px;
+//        height: 23px;
+//        background-repeat: no-repeat;
+//        background-position: 0 0;
+//        background-size: cover;
+//        padding-right: 5px;
+//        font-weight: bold;
+//        font-size: 14px;
+//        color: #a68af7;
+//        text-decoration: none;
+//        line-height: 20px;
+//        letter-spacing: -0.5px;
+//        cursor: hand;
+//    }
+//
+//    @include bp(pc) {
+//        .wrap-contents {
+//        }
+//
+//        .copy {
+//            font-size: 26px;
+//        }
+//
+//        br {
+//            display: none;
+//        }
+//
+//        .link {
+//            width: 162px;
+//            height: 46px;
+//            padding-right: 10px;
+//            font-size: 24px;
+//            line-height: 40px;
+//        }
+//
+//    }
+//}
+
+
+
+// rwd toggle
+[data-rwd-device~="tablet"],
+[data-rwd-device*=" tablet"],
+[data-rwd-device~="pc"],
+[data-rwd-device*=" pc"]{
+    display: none;
+}
+
+[data-rwd-device~="mobile"],
+[data-rwd-device*=" mobile"] {
+    display: block;
+}
+
+@include bp(tablet) {
+    [data-rwd-device~="mobile"],
+    [data-rwd-device*=" mobile"] {
+        display: none;
+    }
+
+    [data-rwd-device~="tablet"],
+    [data-rwd-device*=" tablet"] {
+        display: block;
+    }
+}
+
+@include bp(pc) {
+    [data-rwd-device~="tablet"],
+    [data-rwd-device*=" tablet"] {
+        display: none;
+    }
+
+    [data-rwd-device~="pc"],
+    [data-rwd-device*=" pc"] {
+        display: block;
+    }
+}
+
+.ANDROID {
+    [android-only] {
+        display: inline-block;
+    }
+
+    [ios-only] {
+        display: none;
+    }
+}
+.IOS {
+    [android-only] {
+        display: none;
+    }
+
+    [ios-only] {
+        display: inline-block;
+    }
+}

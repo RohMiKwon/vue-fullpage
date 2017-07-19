@@ -1,0 +1,77 @@
+// layout_header
+// ===============================
+
+.wrap-header {
+    min-height: 56px;
+    //background-color: #4e362c;
+
+    @include bp(pc) {
+        position: static;
+        min-height: 197px;
+        //min-height: 316px;
+        //padding-bottom: 65px;
+        background-image: url('assets/img/layout/header.jpg');
+        background-repeat: no-repeat;
+        background-size: 1920px auto;
+        background-position: 50% 0;
+        background-color: #14191c;
+    }
+
+    .header {
+        @include bp(pc) {
+            position: relative;
+            margin: 0 auto;
+            padding-top: 188px;
+        }
+
+        @include bp(max) {
+            max-width: 1260px;
+        }
+
+        .logo {
+            display: none;
+
+            @include bp(pc) {
+                display: block;
+                position: absolute;
+                top: 15px;
+                left: 0;
+                text-decoration: none;
+                font-family: verdana;
+                color: #000;
+                font-size: 35px;
+                font-weight: 300;
+            }
+        }
+
+        .header-title {
+            display: none;
+            margin: 0;
+            padding: 0;
+            font-size: 21px;
+            color: #fff;
+            letter-spacing: -1px;
+            text-align: center;
+            font-weight: normal;
+            line-height: 1.2;
+
+            @include bp(pc) {
+                //display: block;
+                font-size: 32px;
+            }
+        }
+    }
+
+    .header-subcopy {
+        margin-top: 5px;
+        //padding-bottom: 25px;
+        text-align: center;
+        font-size: 13px;
+        color: rgba(#fff, .4);
+        line-height: 1.2;
+
+        @include bp(pc) {
+            margin-top: 17px;
+        }
+    }
+}

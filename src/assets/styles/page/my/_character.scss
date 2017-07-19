@@ -1,0 +1,249 @@
+// my character list
+// ===============================
+
+
+// 작성/댓글/생성된 캐릭터 없는 경우
+// ------------------------------
+.profile-none {
+    padding: 150px 0 90px 0;
+    font-size: 16px;
+    color: #c7c7cc;
+    text-align: center;
+
+    .btn-wrap {
+        margin-top: 25px;
+
+        .btn-preorder-guild {
+            display: inline-block;
+            color: #1f1f1f;
+            letter-spacing: -1px;
+
+            &:hover { text-decoration: underline; }
+
+            &:after {
+                content: '';
+                display: inline-block;
+                margin-left: 6px;
+                @include triangle(10px 6px, #b8b8b8, right);
+            }
+        }
+    }
+
+    @include bp(pc) {
+        padding: 150px 0;
+        letter-spacing: -.6px;
+    }
+}
+
+.guild-none {
+    .profile-none {
+        color: #686868;
+        font-weight: bold;
+        letter-spacing: none;
+    }
+}
+
+.profile-none-msg {
+    margin-top: -65px;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #686868;
+    line-height: 1.4;
+    text-align: center;
+
+    .btn-go-agit {
+        display: inline-block;
+        margin-top: 20px;
+        color: #1f1f1f;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            margin-left: 6px;
+            @include triangle(10px 6px, #b8b8b8, right);
+        }
+    }
+
+    @include bp(pc) {
+        margin-top: -120px;
+    }
+}
+
+// 내 캐릭터 리스트
+// ------------------------------
+.my-character-list-wrap {
+    margin-top: 6px;
+
+    @include bp(pc) {
+        margin-top: -22px;
+    }
+}
+
+.my-character-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @include clearfix;
+
+    @include bp(pc) {
+        border-bottom: solid 1px #f0f0f0;
+    }
+}
+
+.my-character-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-flow: row wrap;
+    min-height: 50px;
+    margin: 0 18px;
+    //padding: 20px 0 20px 62px;
+    padding: 10px 0 10px 0;
+    list-style-type: none;
+    border-bottom: solid 1px #f0f0f0;
+
+    @include bp(pc) {
+        float: left;
+        width: 50%;
+        min-height: 104px;
+        margin: 1px 0 -1px 0;
+        padding: 12px 25px;
+    }
+
+    .thumb-wrap {
+        position: relative;
+        display: inline-block;
+        margin-right: 12px;
+
+        @include bp(pc) {
+            margin-right: 18px;
+        }
+
+        .thumb {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            vertical-align: top;
+        }
+
+        @include bp(pc) {
+            .thumb {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+
+    .attach-list-items {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        //top: 0;
+        //left: 0;
+        min-width: 50px;
+        min-height: 50px;
+        background-color: transparent;
+
+        @include bp(pc) {
+            width: 100%;
+            height: 100%;
+        }
+
+        .fe-icon-photo {
+            position: absolute;
+            right: -7px;
+            bottom: -5px;
+            width: 25px;
+            height: 25px;
+            background: url('assets/img/my/btn_upload.png') no-repeat;
+            background-size: 25px auto;
+            @include hide-text();
+
+            @include bp(pc) {
+                right: -5px;
+                bottom: 0;
+                width: 32px;
+                height: 32px;
+                background-size: 32px auto;
+
+            }
+        }
+    }
+
+    .character {
+        display: block;
+        margin-right: 8px;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        color: #1f1f1f;
+
+        .name {
+            font-weight: normal;
+        }
+
+        @include bp(tablet) {
+            display: inline-block;
+        }
+
+        @include bp(pc) {
+            display: block;
+            margin-top: 0;
+            vertical-align: middle;
+            font-size: 16px;
+            letter-spacing: -.7px;
+        }
+
+        @include bp(max) {
+            display: inline-block;
+        }
+    }
+
+    .server-guild {
+        margin-top: -1px;
+        font-size: 13px;
+
+        @include bp(tablet) {
+            display: inline-block;
+            height: 20px;
+            vertical-align: middle;
+            line-height: 22px;
+
+        }
+
+        @include bp(pc) {
+            font-size: 14px;
+            letter-spacing: -.6px;
+        }
+
+        .server {
+            font-weight: normal;
+            font-style: normal;
+            color: #a2a8b2;
+        }
+
+        .guild {
+            font-weight: normal;
+            font-style: normal;
+            color: #c5986b;
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                margin-right: 6px;
+                margin-left: 3px;
+                background-color: #a2a8b2;
+                vertical-align: middle;
+                border-radius: 50%;
+            }
+        }
+
+
+    }
+}

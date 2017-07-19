@@ -1,0 +1,197 @@
+// my guild header (profile)
+// ===============================
+
+[class^="btn-guild-"],
+[class*=" btn-guild-"] {
+    min-width: 64px;
+    height: (64px/2);
+    padding: 0 13px;
+    margin: 0 3px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: (64px/4);
+
+    @include bp(pc) {
+        min-width: 80px;
+        height: 40px;
+        margin: 0 4px;
+        padding-bottom: 2px;
+        font-size: 15px;
+        line-height: 36px;
+        border-radius: 40px;
+        letter-spacing: -.6px;
+    }
+}
+
+// 속이 빈 기본 타입1
+.btn-guild-type1 {
+    color: #bc8d5d;
+    border: 1px solid #bc8d5d;
+}
+
+// 속이 찬 기본 타입2
+.btn-guild-type2 {
+    color: #fff;
+    background-color: #bc8d5d;
+}
+
+.my-guild-header {
+    padding: 5px 0 25px 0;
+    font-size: 18px;
+    color: #c5986b;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e5;
+
+    @include bp(pc) {
+        border: 0 none;
+        margin-top: -11px;
+        padding-bottom: 60px;
+    }
+
+    .profile {
+        width: 100%;
+        height: (160px/2);
+        background: url('assets/img/my/guild/profile.png') no-repeat center top;
+        background-size: auto 100%;
+
+        @include bp(pc) {
+            display: none;
+        }
+    }
+
+    .info {
+        margin-top: 10px;
+
+        .server {
+            color: #797e88;
+        }
+
+        .name {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                margin-right: 6px;
+                margin-left: 2px;
+                background-color: #797e88;
+                vertical-align: middle;
+                border-radius: 50%;
+            }
+        }
+
+        .person {
+            color: #8c919a;
+        }
+
+        .btn-wrap {
+            margin-top: 12px;
+        }
+
+        .btn {
+            @extend .btn-guild-type1;
+
+            &-guild-member-event {
+                color: #fff;
+                border: 0 none;
+                background-color: #c19870;
+            }
+
+            &-guild-admin,
+            &-guild-leave {
+                color: #8c919a;
+                border-color: #8c919a;
+            }
+
+            &-guild-admin {
+                position: relative;
+
+                &.admin-new {
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: -6px;
+                        right: -4px;
+                        width: 20px;
+                        height: 18px;
+                        background: url('assets/img/my/guild/ic_admin_new.png') no-repeat;
+                        background-size: cover;
+                    }
+                }
+            }
+
+            @include bp(pc) {
+                padding: 0 16px 3px 16px;
+            }
+        }
+
+        a.btn {
+            line-height: (64px/2-2px);
+
+            @include bp(pc) {
+                line-height: 37px;
+            }
+        }
+
+        a.btn-guild-mtalk {
+            height: 40px;
+            padding: 0 22px;
+            line-height: 38px;
+            border-radius: 20px;
+
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                margin-top: 9px;
+                margin-right: 6px;
+                background: url('assets/img/my/guild/ic_mtalk.png') no-repeat;
+                background-size: cover;
+                vertical-align: top;
+            }
+        }
+
+        @include bp(pc) {
+            display: inline-block;
+            height: 102px;
+            padding-top: 13px;
+            padding-left: 105px;
+            background: url('assets/img/my/guild/profile.png') no-repeat left top;
+            background-size: auto 100%;
+            font-size: 21px;
+            letter-spacing: -1px;
+            text-align: left;
+
+            &-v2 { padding-top: 36px; }
+
+            .server { margin-left: 4px; }
+
+            .person {
+                &:before {
+                    margin-right: 11px;
+                    margin-left: 5px;
+                }
+            }
+
+            .name { color: #1f1f1f; }
+            .btn-wrap { text-align: left; }
+        }
+    }
+}
+
+// 탭 스타일 재선언
+.tab-my-guild { margin-top: 0; }
+.tab-my-guild.depth3-list-wrap  .depth3-list { width: 100%; padding-right: 0; }
+.tab-my-guild.depth3-list-wrap .depth3-list-items { width: 33.33333333%; }
+
+.page-my-guild {
+    .wrap-header {
+
+    }
+}
+
+// mtalk 위치 조정
+.tablet .my-guild-header .info .btn-wrap { display: inline; }

@@ -1,0 +1,179 @@
+@import
+"../module/attach_thumb";
+
+.ui-emblem-wrap {
+    position: relative;
+    padding-left: (133px/2);
+    overflow: hidden;
+    @include clearfix();
+
+    .attach-list-items {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+
+    .is-selected {
+        .attach-thumb,
+        .emblem-wrap {
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                width: 60px;
+                height: 60px;
+                border: 2px solid #b00909;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+.emblem-list {
+    position: relative;
+    width: auto;
+    height: 78px;
+    white-space: nowrap;
+
+    .emblem-items {
+        display: inline-block;
+        padding: 0;
+        margin-right: 2px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        .emblem-wrap {
+            position: relative;
+
+            img {
+                width: 60px;
+                height: 60px;
+                z-index: 0;
+            }
+        }
+    }
+}
+
+// 사진 올리기 버튼
+.btn-img-upload {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #ddd !important;
+    cursor: pointer;
+
+    i {
+        color: #fff;
+        background-color: #ddd;
+    }
+}
+
+.btn-img-upload-del {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 3;
+    width: 22px;
+    height: 22px;
+    background: url('assets/img/preorder/emblem/emblem-sprites.png') no-repeat !important;
+    background-size: 22px auto !important;
+    background-position: 0 (-128px/2) !important;
+    @include hide-text();
+}
+
+
+////////////////////// 160912
+//.emblem-list {
+//    position: relative;
+//    width: 100%;
+//    //float: right;
+//    //width: (66px*3);
+//
+//
+//    @include bp(popup) {
+//        //width: (66px*5);
+//    }
+//
+//    .slick-arrow {
+//        position: absolute;
+//        top: -15px;
+//        width: 20px;
+//        height: 20px;
+//        background: url('assets/img/preorder/emblem/emblem-sprites.png') no-repeat;
+//        background-size: 22px auto;
+//        outline: none;
+//
+//        @include hide-text();
+//    }
+//
+//    .slick-prev {
+//        right: 25px;
+//        left: auto;
+//    }
+//
+//    .slick-next {
+//        right: 0;
+//        background-position: 0 (-64px/2);
+//    }
+//}
+//
+//.emblem-items {
+//    position: relative;
+//    padding: 0 3px;
+//    cursor: pointer;
+//
+//    .emblem-wrap {
+//        position: relative;
+//        width: 60px;
+//        height: 60px;
+//
+//        img {
+//            position: absolute;
+//            top: 0;
+//            left: 0;
+//            z-index: 2;
+//            width: 60px;
+//            height: 60px;
+//        }
+//    }
+//}
+//
+//// 사진 올리기 버튼
+//.btn-img-upload {
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    z-index: 1;
+//    display: block;
+//    width: 60px;
+//    height: 60px;
+//    background-color: #ddd !important;
+//    cursor: pointer;
+//
+//    i {
+//        color: #fff;
+//        background-color: #ddd;
+//    }
+//}
+//
+//.btn-img-upload-del {
+//    position: absolute;
+//    bottom: 0px;
+//    right: 0px;
+//    z-index: 3;
+//    width: 22px;
+//    height: 22px;
+//    background: url('assets/img/preorder/emblem/emblem-sprites.png') no-repeat !important;
+//    background-size: 22px auto !important;
+//    background-position: 0 (-128px/2) !important;
+//    @include hide-text();
+//}
+//

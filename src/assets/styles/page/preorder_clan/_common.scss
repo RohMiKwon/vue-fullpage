@@ -1,0 +1,408 @@
+// 혈맹창설_공통
+// ===============================
+
+// 혈맹 리스트 아이템
+.clan-list-items {
+
+    .block {
+        position: relative;
+        width: 100%;
+        min-height: 84px;
+        padding: 0 105px 0 15px;
+        font-size: 14px;
+        text-align: left;
+        overflow: hidden;
+
+        @include bp(tablet) {
+            font-size: 13px;
+        }
+
+        @include bp(pc) {
+            height: 116px;
+            line-height: 116px;
+            padding-left: 30px;
+            padding-right: 170px;
+            font-size: 14px;
+        }
+
+        @include bp(max) {
+            font-size: em(16px);
+        }
+    }
+
+    .thumb-wrap {
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 50%;
+        //background-color: rgba(#420201, .9);
+        //border: 1px solid #ededed;
+
+        .thumb {
+            //width: 100%;
+            //height: auto;
+            //vertical-align: top;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            display:inline-block;
+            width: auto;
+            max-width: none;
+            height: 100%;
+            transform: translate(-50%, -50%);
+            //border-radius: 50%;
+        }
+
+        @include bp(pc) {
+            top: 20px;
+            left: 30px;
+            width: 80px;
+            height: 80px;
+            line-height: 80px;
+        }
+    }
+
+    .clan-info-wrap {
+        display: inline-block;
+        width: 100%;
+        padding: 16px 0 17px;
+        line-height: 18px;
+        font-size: 16px;
+        vertical-align: middle;
+
+        .clan { color: #fff; }
+
+        .master-wrap {
+            display: block;
+            margin-top: 2px;
+            font-size: 13px;
+        }
+
+        .master {
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 2px;
+                margin-right: 5px;
+                background-color: #9e9c9c;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+
+        @include bp(pc) {
+            padding: 0;
+        }
+    }
+
+    .title {
+        margin: 0;
+        padding: 0 0 2px 0;
+        font-size: 12px;
+        color: #f0b6b6;
+        font-weight: normal;
+
+        @include bp(pc) {
+            font-size: 13px;
+        }
+    }
+
+    .clan {
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 2px;
+            height: 2px;
+            margin-right: 5px;
+            background-color: #ababab;
+            border-radius: 50%;
+            vertical-align: middle;
+        }
+
+        .person {
+            color: #686868;
+            font-style: normal;
+        }
+    }
+
+    .intro {
+        margin: 10px -75px 0 0;
+        padding: 0;
+        font-size: 12px;
+        font-weight: 300;
+        line-height: 1.2;
+        color: #686868;
+        @include word-wrap;
+
+        @include bp(tablet) {
+            margin-right: 0;
+            font-size: 13px;
+        }
+
+        @include bp(pc) {
+            width: percentage(640/980);
+            margin-top: 6px;
+
+            line-height: 18px;
+        }
+    }
+
+    .btn {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        min-width: 65px;
+        height: 24px;
+        padding: 0 12px;
+        color: #d89f75;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 22px;
+        border-radius: 12px;
+        border: 1px solid #d89f75;
+
+        &:hover {
+            border-color: #bd8e6c;
+            color: #bd8e6c;
+        }
+
+        @include bp(pc) {
+            top: 40px;
+            right: 30px;
+            min-width: 112px;
+            height: 40px;
+            padding: 0 29px;
+            font-size: 14px;
+            line-height: 38px;
+            border-radius: 20px;
+        }
+    }
+
+    .btn-cancel-request {
+        border: 1px solid #d89f75;
+    }
+}
+
+// 혈맹 아지트에서는
+.preorder-clan-agit-intro {
+    padding-top: 25px;
+    text-align: center;
+
+    @include bp(pc) {
+        padding-top: 98px;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 0 0 15px 0;
+        font-size: 17px;
+        font-weight: 300;
+        font-style: normal;
+        text-align: center;
+        color: #5c443b;
+
+        @include bp(pc) {
+            font-size: 30px;
+            padding-bottom: 24px;
+        }
+    }
+
+    ul {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            position: relative;
+            padding-left: 10px;
+            padding-bottom: 10px;
+            font-size: 13px;
+            font-weight: 300;
+            font-style: normal;
+            line-height: 1.3;
+            text-align: left;
+            color: #686868;
+            //text-indent: 10px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 6px;
+                left: 0;
+                display: inline-block;
+                width: 3px;
+                height: 3px;
+                background-color: #d6d6d6;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+
+            @include bp(tablet) {
+                br { display: none; }
+            }
+
+            @include bp(pc) {
+                padding-bottom: 10px;
+                padding-left: 16px;
+                font-size: 16px;
+
+                &:before {
+                    width: 6px;
+                    height: 6px;
+                }
+
+            }
+        }
+    }
+
+    .btn-wrap {
+        margin-top: 50px;
+
+        @include bp(pc) {
+            margin-top: 89px;
+        }
+    }
+
+    .btn-clan-sms {
+        padding: 0 22px;
+        height: 45px;
+        font-size: 15px;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        color: #fff;
+        line-height: 45px;
+        background-image: linear-gradient(to top, #986739, #ce9762);
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+
+        @include bp(pc) {
+            height: 75px;
+            padding-right: 40px;
+            padding-left: 40px;
+            line-height: 75px;
+            font-size: 16px;
+        }
+    }
+
+    .go-home {
+        margin: 40px 0 0 0;
+    }
+
+    .btn-go-home {
+        font-size: 14px;
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.07;
+        color: #1f1f1f;
+
+        &:hover {
+            text-decoration: underline;
+        }
+
+        &:after {
+            content: '';
+            display: inline-block;
+            margin-left: 2px;
+            @include triangle(10px 6px, #b8b8b8, right);
+        }
+
+        @include bp(pc) {
+            font-size: 16px;
+        }
+    }
+}
+
+.pagination-container-sub {
+
+    .pagination-list .prev i,
+    .pagination-list .next i {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        vertical-align: middle;
+        line-height: 1;
+        font-size: 0;
+        opacity: .7;
+        background-image: url('assets/img/icon/arrow.png');
+        background-repeat: no-repeat;
+        background-size: auto 30px;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .pagination-list .next i { background-position: right top; }
+
+}
+
+.sub-caution-wrap {
+    text-align: center;
+
+    .btn-event-notice {
+        display: block;
+        width: 275px;
+        height: 40px;
+        margin: 50px auto 0 auto;
+        font-size: 12px;
+        letter-spacing: -1px;
+        color: #8a8a8a;
+        text-align: center;
+        text-decoration: none;
+        line-height: 38px;
+        border: 1px solid #ededed;
+
+        &:hover {
+            border-color: rgba(162, 168, 178, 0.6);
+        }
+
+        @include bp(pc) {
+            width: 280px;
+            height: 57px;
+            margin-top: 100px;
+            font-size: 16px;
+            line-height: 54px;
+        }
+    }
+}
+
+// 유의사항 레이어
+.layer-event-notice {
+    .ly-contents {
+        .caution-block {
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            margin: 0;
+            padding: 0 0 2px 0;
+            font-size: 21px;
+            letter-spacing: -1px;
+            font-weight: normal;
+            color: #bc8d5d;
+        }
+
+        ol {
+            margin: 0.5em 1em;
+            padding: 0;
+
+            li {
+                margin-bottom: 10px;
+                margin-top: 4px;
+                font-size: 15px;
+                line-height: 1.5em;
+                color: #414141;
+                letter-spacing: -.7px;
+            }
+        }
+    }
+}

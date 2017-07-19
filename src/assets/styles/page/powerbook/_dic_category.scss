@@ -1,0 +1,102 @@
+// 파워북 사전 카테고리
+$category-height: 44px;
+$category-point-color: #b6885b;
+
+.category-list-wrap {
+    position: relative;
+    height: $category-height;
+    overflow: hidden;
+    background-color: #fafafa;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        border-bottom: 1px solid #efefef;
+    }
+
+    @include bp(pc) {
+        margin-top: 0;
+
+        &:before {
+            border-color: #e1e1e5;
+        }
+    }
+
+    .scroller {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+
+        @include bp(pc) {
+            width: 100% !important;
+        }
+    }
+
+    .category-list {
+        display: table;
+        padding-left: 7px;
+        padding-right: 30px;
+        height: 100%;
+        white-space: nowrap;
+        @include clearfix;
+
+        @include bp(pc) {
+            padding-left: 0;
+            margin-left: -15px;
+
+        }
+    }
+
+    .category-list-items {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        height: $category-height;
+        font-size: 15px;
+        letter-spacing: -.5px;
+        white-space: nowrap;
+        text-align: center;
+        vertical-align: top;
+
+        a {
+            display: block;
+            height: $category-height - 1px;
+            padding: 0 8px;
+            line-height: $category-height - 4px;
+            color: #000;
+        }
+
+        &.selected {
+            &:after {
+                content: '';
+                position: relative;
+                z-index: 9;
+                display: block;
+                width: 30px;
+                height: 1px;
+                margin: 0 auto;
+                background-color: $category-point-color;
+            }
+
+            a {
+                color: $category-point-color;
+            }
+        }
+
+        @include bp(pc) {
+            font-size: 14px;
+            letter-spacing: -1px;
+
+            a { padding: 0 35px; }
+
+            &.selected {
+
+            }
+        }
+    }
+}
