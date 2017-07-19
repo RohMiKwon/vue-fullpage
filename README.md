@@ -1,6 +1,6 @@
-# fullpage
+# vue-fullpage
 
-> fullpage rwd web
+> vuejs 기반, fullpage 레이아웃 반응형 웹
 
 ## Build Setup
 
@@ -23,5 +23,13 @@ npm run unit
 # run all tests
 npm test
 ```
+
+## Feature
+* vuejs 기반
+* Client Routing
+* fullpage layout
+* 페이지 전환 
+  * touch devices : swipe
+  * desktop : scrolling
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

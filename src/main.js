@@ -15,7 +15,8 @@ Vue.use(IScrollView, IScroll)
 new Vue({
   el: '#app',
   router,
-  render: h => h(App)
+  template: '<App/>',
+  components: { App }
 })
 
 /* eslint-disable https://github.com/wendaosanshou/vue-fullpage/blob/master/index.js */
