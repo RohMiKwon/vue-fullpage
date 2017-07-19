@@ -46,10 +46,10 @@
     data () {
       return {
         menus: [
-          { id: '', text: '사전예약' },
-          { id: 'minigame', text: '미니게임' },
-          { id: 'character', text: '캐릭터 생성' },
-          { id: 'media', text: '미디어' }
+          { id: '', text: 'menu1' },
+          { id: 'minigame', text: 'menu2' },
+          { id: 'character', text: 'menu3' },
+          { id: 'media', text: 'menu4' }
         ]
       }
     },

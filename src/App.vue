@@ -92,7 +92,7 @@ export default {
 </script>
 
 <style lang="scss">
-/*@import '~@/assets/styles/preorder.scss';*/
+@import '~@/assets/sass/app.scss';
 
 html, body {
   overflow: hidden;

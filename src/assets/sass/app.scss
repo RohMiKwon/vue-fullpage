@@ -1,0 +1,31 @@
+// base
+// ===============================
+@import
+"base/_normalize.4.0.0",
+"base/_reset";
+
+
+// vendor
+// ===============================
+@import
+"vendor/_swiper.min";
+
+
+// util
+// ===============================
+@import
+"util/_variable",
+"util/_mixin";
+
+
+// module
+// ===============================
+// @import "module/_layer";
+
+
+// layout
+// ===============================
+@import
+"layout/_common",
+"layout/_header",
+"layout/_footer";
