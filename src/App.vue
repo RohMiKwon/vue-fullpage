@@ -128,11 +128,11 @@ section {
 }
 
 .slidedown-enter, .slideup-leave-active {
-  transform: translate3d(0px,100%,0px);
+  transform: translate3d(0px,80%,0px);
 }
 
 .slideup-enter, .slidedown-leave-active {
-  transform: translate3d(0,-100%,0px);
+  transform: translate3d(0,-80%,0px);
 }
 
 .slideleft-enter, .slideright-leave-active {

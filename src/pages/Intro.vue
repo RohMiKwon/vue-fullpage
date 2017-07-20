@@ -1,43 +1,43 @@
 <template>
-  <iscroll-view class="scroll-view" @pullUp="onPullUp" @pullDown="onPullDown" :options="{mouseWheel: true}">
-    <div style="width:100%; height: 100%;min-height:1000px">
-      <section class="intro">
-            <h1>인트로섹션</h1>
-            <div id="menu-wrap" class="menu-wrap">
-              <div id="flip-menu" class="flip-menu" style="display: none">
-                <div class="flip-container character">
-                  <a href="#character" class="flipper">
-                    <span class="front"></span>
-                    <span class="back"></span>
-                  </a>
-                </div>
-                <div class="flip-container minigame">
-                  <a href="#minigame" class="flipper">
-                    <span class="front"></span>
-                    <span class="back"></span>
-                  </a>
-                </div>
-              </div>
-
-              <div id="swiper-menu" class="swiper-container menu-list" style="display: none">
-                <div class="swiper-wrapper">
-                  <template v-for="menu in menus">
-                    <div class="swiper-slide" v-bind:data-section-id="menu.id">
-                      <span class="menu" v-bind:class="menu.id">{{ menu.text }}</span>
-                    </div>
-                  </template>
-                </div>
-              </div>
-
-              <ul>
-                <li v-for="menu in menus">
-                  <router-link v-bind:to="menu.id">{{ menu.text }}</router-link>
-                </li>
-              </ul>
+  <!--<iscroll-view ref="scrollView" class="scroll-view" @pullUp="onPullUp" @pullDown="onPullDown" :options="{mouseWheel: true}">-->
+    <!--<div style="width:100%; height: 100%;">-->
+      <section class="section section-intro">
+        <h1>인트로섹션</h1>
+        <div id="menu-wrap" class="menu-wrap">
+          <div id="flip-menu" class="flip-menu" style="display: none">
+            <div class="flip-container character">
+              <a href="#character" class="flipper">
+                <span class="front"></span>
+                <span class="back"></span>
+              </a>
             </div>
+            <div class="flip-container minigame">
+              <a href="#minigame" class="flipper">
+                <span class="front"></span>
+                <span class="back"></span>
+              </a>
+            </div>
+          </div>
+
+          <div id="swiper-menu" class="swiper-container menu-list" style="display: none">
+            <div class="swiper-wrapper">
+              <template v-for="menu in menus">
+                <div class="swiper-slide" v-bind:data-section-id="menu.id">
+                  <span class="menu" v-bind:class="menu.id">{{ menu.text }}</span>
+                </div>
+              </template>
+            </div>
+          </div>
+
+          <ul>
+            <li v-for="menu in menus">
+              <router-link v-bind:to="menu.id">{{ menu.text }}</router-link>
+            </li>
+          </ul>
+        </div>
       </section>
-    </div>
-  </iscroll-view>
+    <!--</div>-->
+  <!--</iscroll-view>-->
 </template>
 
 <script>
@@ -46,15 +46,12 @@
     data () {
       return {
         menus: [
-          { id: '', text: 'menu1' },
-          { id: 'minigame', text: 'menu2' },
-          { id: 'character', text: 'menu3' },
-          { id: 'media', text: 'menu4' }
+          { id: '', text: '사전예약' },
+          { id: 'minigame', text: '미니게임' },
+          { id: 'character', text: '캐릭터생성' },
+          { id: 'media', text: '미디어' }
         ]
       }
-    },
-    created () {
-      console.log('created')
     },
     computed: {
       getCurrentRouteInfo () {

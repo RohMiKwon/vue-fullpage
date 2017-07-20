@@ -6,10 +6,17 @@ import router from './router'
 import VueTouch from 'vue-touch'
 import IScrollView from 'vue-iscroll-view'
 import IScroll from 'iscroll'
+import BootstrapVue from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 Vue.config.productionTip = false
 Vue.use(VueTouch, {name: 'v-touch'})
+VueTouch.config.swipe = {
+  threshold: 200
+}
 Vue.use(IScrollView, IScroll)
+Vue.use(BootstrapVue)
 
 /* eslint-disable no-new */
 new Vue({
@@ -18,6 +25,3 @@ new Vue({
   template: '<App/>',
   components: { App }
 })
-
-/* eslint-disable https://github.com/wendaosanshou/vue-fullpage/blob/master/index.js */
-/* eslint-disable https://vuejs.org/v2/guide/plugins.html */
