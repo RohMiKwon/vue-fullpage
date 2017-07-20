@@ -19,6 +19,12 @@
             </div>
           </div>
 
+          <ul>
+            <li v-for="menu in menus">
+              <router-link v-bind:to="menu.id">{{ menu.text }}</router-link>
+            </li>
+          </ul>
+
           <div id="swiper-menu" class="swiper-container menu-list" style="display: none">
             <div class="swiper-wrapper">
               <template v-for="menu in menus">
@@ -29,11 +35,34 @@
             </div>
           </div>
 
-          <ul>
-            <li v-for="menu in menus">
-              <router-link v-bind:to="menu.id">{{ menu.text }}</router-link>
-            </li>
-          </ul>
+          <div>
+            <b-input-group left="$" right=".00">
+              <b-form-input></b-form-input>
+            </b-input-group>
+
+            <br>
+
+            <b-input-group size="lg" left="$" right=".00">
+              <b-form-input></b-form-input>
+            </b-input-group>
+
+            <br>
+
+            <b-input-group left="Username">
+              <b-form-input></b-form-input>
+
+              <!-- Attach Right button -->
+              <b-input-group-button slot="right">
+                <b-dropdown text="Dropdown" variant="success" right>
+                  <b-dropdown-item>Action</b-dropdown-item>
+                  <b-dropdown-item>Action</b-dropdown-item>
+                </b-dropdown>
+              </b-input-group-button>
+
+            </b-input-group>
+          </div>
+
+          <!-- input-group-1.vue -->
         </div>
       </section>
     <!--</div>-->
