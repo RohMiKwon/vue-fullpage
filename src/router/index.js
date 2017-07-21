@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Intro from '@/components/Intro'
-import Minigame from '@/components/Minigame'
-import MinigameView from '@/components/MinigameView'
-import Character from '@/components/Character'
-import CharacterView from '@/components/CharacterView'
-import Media from '@/components/Media'
+import Index from '@/components/Index/index'
+import Minigame from '@/components/Minigame/index'
+import MinigameView from '@/components/Minigame/view'
+import Character from '@/components/Character/index'
+import CharacterView from '@/components/Character/view'
+import Media from '@/components/Media/index'
 
 Vue.use(Router)
 
@@ -14,8 +14,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'intro',
-      component: Intro,
+      name: 'index',
+      component: Index,
       meta: {
         order: 1
       }

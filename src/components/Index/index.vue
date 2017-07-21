@@ -71,7 +71,7 @@
 
 <script>
   export default {
-    name: 'intro',
+    name: 'index',
     data () {
       return {
         menus: [
