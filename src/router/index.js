@@ -1,11 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Intro from '@/pages/Intro'
-import Minigame from '@/pages/Minigame'
-import MinigameView from '@/pages/MinigameView'
-import Character from '@/pages/Character'
-import CharacterView from '@/pages/CharacterView'
-import Media from '@/pages/Media'
+import Intro from '@/components/Intro'
+import Minigame from '@/components/Minigame'
+import MinigameView from '@/components/MinigameView'
+import Character from '@/components/Character'
+import CharacterView from '@/components/CharacterView'
+import Media from '@/components/Media'
 
 Vue.use(Router)
 
