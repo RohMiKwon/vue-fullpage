@@ -31,5 +31,6 @@ npm test
 * 페이지 전환 
   * touch devices : swipe
   * desktop : scrolling
+* bootstrap-vue 사용 
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
